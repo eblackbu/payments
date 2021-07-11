@@ -14,7 +14,7 @@
 
 ### Используемые инструменты:
 1. Python 3.8
-2. Django 2.2.10
+2. Django 3.2
 3. PostgreSQL
 4. Celery + Redis
 6. Nginx
