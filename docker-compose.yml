@@ -1,7 +1,7 @@
 version: "3"
 
 volumes:
-  staticfiles: {}
+  staticfiles:
 
 services:
 
@@ -31,7 +31,7 @@ services:
     command: gunicorn --workers=3 paymentAPI.wsgi -b 0.0.0.0:8000
     volumes:
       - .:/code
-      - ./static_files:/code/static
+      - ./staticfiles:/code/static
     env_file:
       - ./.env
     entrypoint:
@@ -50,7 +50,7 @@ services:
       - "80:80"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
-      - ./static_files:/static
+      - ./staticfiles:/static
     depends_on:
       - web
     restart: on-failure:3

@@ -4,6 +4,7 @@ venv/*
 __pycache__/
 *.pyc
 static
-static_files
+staticfiles/*
+!staticfiles/.gitkeep
 celerybeat-schedule
 db
